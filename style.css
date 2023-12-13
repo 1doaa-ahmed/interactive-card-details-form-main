@@ -1,0 +1,219 @@
+:root {
+    /* colors */ 
+    --active-input-border: linear-gradient(
+        to right ,
+        hsl(249, 99%, 64%) 0% , 
+        hsl(278, 94%, 30%) 100%);
+    --red : hsl(0, 100%, 66%) ;
+    --White: hsl(0, 0%, 100%) ;
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%) ;
+    --Very-dark-violet: hsl(278, 68%, 11%);
+}
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body { 
+    font-size: 18px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-family: 'Manrope', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    height: 100vb;
+    background-image: url(./images/bg-main-mobile.png);
+    background-size: 100% 260px;
+    background-repeat: no-repeat;
+}
+.container { 
+    max-width: 600px;
+    padding: 40px 25px ;
+    margin: 0 auto;
+}
+img{
+    display: block;
+}
+.main {
+    position: relative;
+    height: 330px;
+}
+.back-card{
+    position: relative;
+    max-width: 300px;
+    margin: 0 0 0 auto;
+    left: 0;
+}
+.back-card img {
+    width: 100%;
+}
+.back-card .text-card-back {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 30px;
+    color: white;
+    font-size: 12px;
+}
+.front-card{
+    position: absolute;
+    top: 100px;
+    max-width: 300px;
+    font-size: 10px;
+    text-align: center;
+}
+.front-card img {
+    width: 100%;
+}
+.front-card .card-details {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    color: white;
+    padding: 15px ;
+}
+.front-card .card-details img {
+    width: 50px;
+    margin-bottom: 45px;
+}
+.front-card .card-details .number{
+    display: block;
+    letter-spacing: 4.8px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.front-card .card-details .info{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    letter-spacing: 2px;
+}
+form {
+    padding: 8px;
+    display: block;
+}
+form > div {
+    display: flex;
+    flex-direction: column;
+}
+.form label {
+    display:  block;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: var(--Very-dark-violet);
+    margin-bottom: 5px;
+}
+.form input {
+    font-size: 16px;
+    letter-spacing: 1px;
+    outline: none;
+    border: 1px solid var(--Light-grayish-violet);
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: var(--Very-dark-violet);
+    margin-bottom: 20px ;
+    width: 100%;
+}
+.form input:focus {
+    border: 1px solid;
+    border-color: var(--active-input-border);
+}
+.form .error{
+    font-size: 13px;
+    margin-top: 2px;
+    color: var(--red);
+    display: none;
+}
+.d-block {
+    display: block;
+}
+.d-none {
+    display: none;
+}
+.error {
+    border-color: var(--red);
+}
+.form-date {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.date {
+    display: flex;
+    gap: 15px;
+    margin-bottom: -22px;
+}
+.month , .year {
+    /* margin-bottom: 0px; */
+    width: 50%;
+}
+button { 
+    display: block;
+    width: 100%;
+    padding: 15px 10px  ;
+    color: white;
+    background-color: var(--Very-dark-violet);
+    border: none;
+    border-radius: 8px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.right img {
+    margin-bottom: 40px;
+}
+.right p {
+    margin-bottom: 40px;
+    margin-top: 25px;
+    color: var(--Dark-grayish-violet);
+}
+.right h4 {
+    font-size: 34px;
+    font-weight: 100;
+    color: var(--Very-dark-violet);
+    letter-spacing: 3px;
+}
+@media screen and (min-width : 1440px){
+    body { 
+        background-image: url(./images/bg-main-desktop.png);
+        background-repeat: no-repeat;
+        background-size: 30% 100% ;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        height: 100vb;
+        padding: 0;
+    }
+    .main {
+        display: flex;
+        flex-direction: column-reverse;
+        height: 350px;
+        right: 200px;
+    }
+    .back-card , .front-card {
+        top: 0;
+    }
+    .front-card > img  , .back-card > img{
+        width: 300px;
+    }
+    .back-card {
+        left: 50px;
+    }
+}
+/* .submitting {
+    display: none;
+} */
